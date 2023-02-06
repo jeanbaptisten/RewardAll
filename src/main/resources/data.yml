@@ -1,0 +1,6 @@
+#   Data file generated for RewardAll plugin.
+
+# Ce fichier permet de sauvegarder la progression de votes dans le cas d'un redémarrage ou d'un crash.
+# Il n'est pas voué à être modifié.
+# Note: Ce fichier est obselète si le stockage MySQL est activé.
+currentProgress: 0

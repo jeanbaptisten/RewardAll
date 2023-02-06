@@ -1,0 +1,134 @@
+#   Main config file generated for RewardAll plugin.
+
+# Choisis comment le plugin va stoquer ses données..
+storage:
+  # Configure method use.
+  #
+  # Available methods:
+  # • Remote database : MySQL
+  # # Need some connection information.
+  # # Use it for better performances.
+  # • Flatfile : YAML
+  # # No more information needed, but slower than remote databases.
+  storage-method: MySQL
+
+  # Setup connection data.
+  # /!\ Only if you want to use a remote database !
+  mysql:
+    # Database server host.
+    host: 127.0.0.1:3306
+
+    # Database name, username and password.
+    database: minecraft
+    username: root
+    password: ''
+
+# Vous devez configurer le nom du canal où les messages seront envoyés.
+# Pour ce faire, vous devez déjà configurer ce canal dans le fichier "config.yml" du plugin DiscordSRV.
+# Voici mon fichier de configuration à titre d'exemple:
+# Channels: {"global": "836722599295451218", "palier": "836901598101110824"}
+# Dans mon cas, j'utiliserai le canal appelé "palier" pour le plugin.
+# NB : Le nom du canal ne correspond pas forcément au nom dans la config du plugin DiscordSRV. Ce n'est qu'un identifiant.
+channelId: "palier"
+
+# Puisqu'il est possible de mentionner dans les embed, vous devez choisir la mention définie.
+# Voici comment mentionner :
+# Type                     Structure            Example
+# User	                   <@USER_ID>           <@80351110224678912>
+# User (Nickname)	       <@!USER_ID>	        <@!80351110224678912>
+# Channel	               <#CHANNEL_ID>	    <#103735883630395392>
+# Role	                   <@&ROLE_ID>	        <@&165511591545143296>
+# Custom Emoji	           <:NAME:ID>	        <:mmLol:216154654256398347>
+#C ustom Emoji (Animated)  <:a:NAME:ID>	        <a:b1nzy:392938283556143104>
+specialMentionText: "@everyone"
+
+# Permet de configurer le nombre maximum de points
+maxCount: 5000
+
+# Permet de configurer la commande executée lorsque le maximum de points a été atteint.
+maxPointCommand: bc &7[&cReward&6All&7] Max points reached !
+
+# Permet de configurer tous les paliers du plugin suivant un paterne défini:
+# Voici un exemple :
+#  # Définie le palier. Dans ce cas, le palier sera à 10 points.
+#  10:
+#    # Mettre sur true pour ajouter une mention everyone.
+#    specialMention: false
+#    # Ne pas toucher, clef obligatoire.
+#    embedMessage:
+#      # Permet de configurer la couleur de bordure de l'embed.
+#      color: 0,105,255
+#      # Permet de configurer le pied de l'embed.
+#      footer: "Report from ReportSystem"
+#      # Permet de choisir l'image du pied de l'embed.
+#      imageFooter: "https://i.imgur.com/zbBUWh4.jpg"
+#      # Permet de choisir le titre de l'embed.
+#      # Écrire "none" si vous ne voulez pas de titre.
+#      title: "ReportSystem"
+#      # Permet de choisir le titre de le thumbnail.
+#      # Écrire "none" si vous ne voulez pas de thumbnail
+#      thumbnail: "none"
+#      # Permet d'activer ou de désactiver le timestamp.
+#      # Note: La position ne peut être configurée.
+#      enableTimestamp: true
+#      # Permet de définir le contenu de l'embed.
+#      content:
+#        # Correpond à une clef d'identification.
+#        # Le nom de la clef n'est pas importante: Elle vous permet juste de choisir votre organisation.
+#        NewLevel:
+#          # Permet de définir le type de la section.
+#          # Choix disponibles: TEXT / BLANK
+#          type: TEXT
+#          # Permet de choisir le nom de la section.
+#          name: "**New report !**"
+#          # Permet de choisir la valeur de la section.
+#          value: "_%sender%_ reported _%player%_ for **%reason%**."
+#          # Permet de mettre plusieurs sections sur la même ligne.
+#          inline: true
+levels:
+  10:
+    specialMention: false
+    embedMessage:
+      color: 0,105,255
+      footer: "RewardAll - Palier 10"
+      imageFooter: "https://i.imgur.com/zbBUWh4.jpg"
+      title: "RewardAll" # Écrire "none" Si tu ne veux pas de titre
+      thumbnail: "none" # Écrire "none" si tu ne veux pas de thumbnail.
+      enableTimestamp: true
+      content:
+        NewLevel:
+          type: TEXT
+          name: "**Nouveau pallier atteint !**"
+          value: "Nous en sommes à 10 points."
+          inline: true
+        Blank:
+          type: BLANK
+          inline: true
+        CheckPlayer:
+          type: TEXT
+          name: " "
+          value: "GG !"
+          inline: true
+  500:
+    specialMention: true
+    embedMessage:
+      color: 0,105,255
+      footer: "RewardAll - Palier 10"
+      imageFooter: "https://i.imgur.com/zbBUWh4.jpg"
+      title: "RewardAll" # Écrire "none" Si tu ne veux pas de titre
+      thumbnail: "none" # Écrire "none" si tu ne veux pas de thumbnail.
+      enableTimestamp: true
+      content:
+        NewReport:
+          type: TEXT
+          name: "**Nouveau pallier atteint !**"
+          value: "Nous en sommes à 500 points."
+          inline: true
+        Blank:
+          type: BLANK
+          inline: true
+        CheckPlayer:
+          type: TEXT
+          name: " "
+          value: "GG !"
+          inline: true

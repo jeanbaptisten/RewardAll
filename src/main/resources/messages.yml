@@ -1,0 +1,27 @@
+#   Message config file generated for RewardAll plugin.
+
+# Envoyé si le sender n'a pas la permission.
+noPerm: "&7[&cReward&6All&7] &cVous n'avez pas la permission !"
+# Envoyé si l'argument utilisé n'est pas un chiffre.
+notInt: "&7[&cReward&6All&7] &cArgument invalide: /rewardall <points>"
+# Même message mais dans le cas de la commande set.
+notIntSetCmd: "&7[&cReward&6All&7] &cArgument invalide: /rewardall set <points>"
+# Message envoyé si le nombre de points donnés lors de la commande set est plus important que la valeur maximale.
+tooHigh: "&7[&cReward&6All&7] &cLa valeur demandée est trop haute !"
+# Envoyé si la commande n'est pas correcte.
+progresseSet: "&7[&cReward&6All&7] &aLe compteur est maintenant à %points%."
+# Envoyé si la commande n'est pas correcte.
+helpCmd: "&7[&cReward&6All&7] &cErreur: /rewardall <points>"
+# Envoyé au sender lors du reload du plugin.
+reload: "&7[&cReward&6All&7] &aPlugin reload avec succès."
+# Envoyé au sender lors de l'ajout de point(s).
+# Placeholder utilisable: %points%
+addPoints: "&7[&cReward&6All&7] &aVous avez ajouté %points% point(s)."
+# Envoyé à tous les joueurs lorsque l'objectif est complété.
+complete: "&7[&cReward&6All&7] &aObjectif complété !"
+# Envoyé au sender s'il a reset le compteur.
+resetPoints: "&7[&cReward&6All&7] &aReset du compteur effectué !"
+
+# Permet de configurer le format du placeholder.
+# Placeholder : %RewardAll_count%
+placeholderFormat: "&c%actual%&7/&c%max%"

@@ -1,0 +1,10 @@
+name: RewardAll
+version: '${project.version}'
+main: me.niz.rewardall.RewardAll
+api-version: 1.16
+softdepend: [ PlaceholderAPI, DiscordSRV ]
+author: Jb
+website: https://discord.io/AVizion
+commands:
+  rewardall:
+    description: Main command of plugin.
