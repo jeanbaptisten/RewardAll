@@ -9,7 +9,7 @@
 
 ## Description
 
-Plugin Spigot créé en novembre 2021. 
+Plugin Spigot créé en octobre 2021. 
 
 Le but du plugin est de permettre aux joueurs de gagner des points en groupe grâce à des commandes effectuées par le site lors de certaines actions. 
 Une fois une certaine somme atteinte, une commande faisant office de récompense est envoyée par la console pour récompenser les joueurs connectés. 
